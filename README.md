@@ -7,7 +7,7 @@ What is DDL? List some common DDL commands. <br>
 Answer: DDL stands for Data Definition Language, which is a set of SQL statements that are used to create, modify, and remove database objects. DDL is a subset of SQL, and is similar to a computer programming language for defining data structures. <br>
 
 Common DDL commands are: <br>
-CREATE: To create new tables, views, indexes, etc. < br>
+CREATE: To create new tables, views, indexes, etc. <br>
 ALTER: To modify existing database structures, such as adding columns to a table. <br>
 DROP: To delete objects, like tables or indexes. <br>
 TRUNCATE: To quickly remove all records from a table without logging each row deletion. <br>
