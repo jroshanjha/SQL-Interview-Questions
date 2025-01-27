@@ -1,0 +1,26 @@
+WITH etc AS (
+    -- Get the maximum score for each hacker per challenge
+    SELECT 
+        hacker_id,
+        MAX(score) AS max_score
+    FROM 
+        Submissions
+    GROUP BY 
+        hacker_id, challenge_id
+)
+
+    -- Calculate total score for each hacker
+    SELECT 
+        etc.hacker_id,
+        h.name,
+        SUM(etc.max_score) AS total_score
+    FROM 
+        etc
+    JOIN 
+        Hackers h
+    ON 
+        etc.hacker_id = h.hacker_id
+    where etc.max_score >0
+    GROUP BY 
+        etc.hacker_id, h.name
+    order by total_score desc , etc.hacker_id asc
